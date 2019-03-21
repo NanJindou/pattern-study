@@ -34,7 +34,8 @@ package com.edu.pattern.singleton.lazy;
 public class LazyThree {
 
     //单例实例变量
-    private static LazyThree lazy=null;
+    //volatile 保持可见性
+    private static volatile LazyThree lazy=null;
 
     //私有化的构造方法，保证外部的类不能通过构造器来实例化
     private LazyThree(){}
